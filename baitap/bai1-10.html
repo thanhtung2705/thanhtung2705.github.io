@@ -3,55 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tạo form và các điều khiển trên form</title>
-    <style>
-        h1 {
-            text-align: center;
-            color: red;
-        }
-
-        table {
-            border-collapse:collapse;
-            border-color: purple;
-        }
-
-        #button {
-            text-align: center;
-            align-content: center;
-            margin: 0 auto;
-            width: 20%;
-        }
-    </style>
+    <title>Bài 11</title>
 </head>
 <body>
-    <h1>Đăng nhập</h1>
-    <form>
-        <table border="1" cellspacing="0" cellpadding="3">
-            <tr>
-                <td width="150">Mã người dùng:</td>
-                <td width="150"><input type="text" placeholder="đăng nhập" size="40" name="name"></td>
-            </tr>
-            <tr>
-                <td>Mật khẩu</td>   
-                <td><input type="text" placeholder="mật khẩu" size="40" name="pass"></td>
-            </tr>
-            <tr >
-                <td rowspan="2" colspan="2" id="#button"><button type="button" value="Nttung">Đồng ý</button></td>
-            </tr>
-        </table>
-    </form>
-</body>
-<footer>
+    <h1 align="center" style="color: red;">Đăng nhập</h1>
+    <table border="1px" align="center" cellpadding="5" spacepadding="0"style="width: 35%;border-collapse: collapse; background-color:#9AFEFF">
+        <tr>
+            <td>Mã người dùng:</td>
+            <td>
+                <input type="text" id="user" name="user" placeholder="nhập tên">
+            </td>
+        </tr>
+        <tr>
+            <td>Mật khẩu:</td>
+            <td>
+                <input type="password" placeholder="nhập mật khẩu">
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <button onclick="click()">Đồng ý</button>
+            </td>
+        </tr>
+        <tr>
+           <td id="pass" colspan="2" style="text-align: center;color: red;"></td>
+        </tr>
+    </table>
     <script type="text/javascript">
-        function validate() {
-            var msg;
-            if (document.myForm.userPass.value.length > 5) {
-                msg = "good";
-            } else {
-                msg = "poor";
-            }
-            document.getElementById('mylocation').innerText = msg;
+        
+        function click()
+        {
+            var a=document.getElementById("pass");
+            var b=document.getElementById("user");
+            a.innerHTML=b.value;
         }
     </script>
-</footer>
+    
+</body>
 </html>
